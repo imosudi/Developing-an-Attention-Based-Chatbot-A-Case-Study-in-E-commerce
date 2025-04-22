@@ -1,65 +1,51 @@
-# Developing an Attention-Based Chatbot: A Case Study in E-commerce
+# Attention-Based Chatbot Simulation
 
 ## Objective
-To design and simulate an intelligent attention-based chatbot system that mimics human conversation to provide responsive and autonomous customer support in e-commerce environments.
+This project simulates an intelligent chatbot using transformer models (BERT & GPT-2) for classifying customer intents and generating contextual responses. It uses NLP techniques to process customer service queries and offer responsive support in an e-commerce environment.
 
-## Simulation Type
-Natural Language Processing (NLP) Simulation / Neural Network Simulation
+## Folder Structure
 
-## Types of Dataset
-1. Customer service conversations
-2. chat logs
-3. product FAQs
-4. sentiment-labelled dialogue
+- `data/`: Contains input datasets.
+- `src/`: Preprocessing, training, and generation logic.
+- `evaluation/`: Code for evaluating classifier and chatbot responses.
+- `main.py`: Script that runs the full pipeline.
 
-## Possible Sources for Dataset
-1. Kaggle datasets
-2. E-commerce sites
-3. Customer support transcripts
+## How to Run
 
-## Dataset URLs
-1. https://www.kaggle.com/datasets/sbhatti/amazon-customer-support-chat-data
-2. https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+1. **Install dependencies:**
 
-## Setup Instructions
-1. 1. Install Python libraries: TensorFlow/Keras, NLTK, HuggingFace Transformers
-2. 2. Load and preprocess customer service chat datasets
-3. 3. Fine-tune pre-trained transformer models (e.g. BERT, GPT) with attention mechanisms
-4. 4. Simulate interactions using scripted queries and responses
+```bash
+pip install -r requirements.txt
+Run the main pipeline:
 
-## Implementation Guide
-1. 1. Build attention-based encoder-decoder chatbot model
-2. 2. Train using dialogue datasets to classify intents and generate contextual responses
-3. 3. Simulate e-commerce chat scenarios with varied product types and user complaints
-4. 4. Evaluate response coherence, timing, and resolution accuracy
-5. 5. Visualise attention layers and customer journey using Matplotlib or Plotly
+bash
+Copy
+Edit
+python main.py
+(Optional) Chat with the bot:
 
-## Expected Output(s)
-1. Interactive chatbot simulation handling diverse customer queries; attention weight visualisation; metrics such as accuracy
-2. BLEU score
-3. and response latency
+bash
+Copy
+Edit
+python -m src.chatbot
+Dataset Source
+Customer Support Twitter
 
-## Background Studies
-### Attention Mechanism
-A technique in deep learning that enables the model to focus on relevant parts of the input sequence when generating responses, improving context handling in chatbots.
+Expected Output
+Intent classification report: Evaluates how well the classifier is performing.
 
-### Transformer Models
-Deep learning models (e.g., BERT, GPT) that use self-attention for superior performance in NLP tasks like text generation, translation, and question-answering.
+BLEU score: Measures the quality of chatbot-generated responses.
 
-### Chatbot Simulation
-An emulation of conversational agents interacting with users to simulate real-time customer service scenarios in a controlled environment.
+Real-time chatbot responses: Chatbot will generate responses to customer queries.
 
-### Intent Classification
-NLP method to determine user’s intention in a message (e.g., product inquiry, complaint).
+Background
+This project uses state-of-the-art transformer models such as BERT and GPT-2. The BERT model is used for intent classification, while GPT-2 is used for generating human-like responses based on the user's input. The Attention Mechanism plays a key role in understanding and generating contextually relevant text by focusing on the most important parts of the input during processing.
 
-### Dialogue Management
-System module responsible for tracking conversation flow and generating appropriate responses.
+Key Concepts:
+Attention Mechanism: Allows the model to focus on relevant parts of the input sequence, improving context handling.
 
-### BLEU Score
-A metric to evaluate the quality of text which has been machine-translated from one language to another, or generated in chatbot contexts.
+Transformer Models: Deep learning models (like BERT and GPT-2) that excel at NLP tasks due to their self-attention mechanism.
 
-### Contextual Embeddings
-Vector representations of words that consider the surrounding text, improving meaning capture in NLP tasks.
+BLEU Score: A metric for evaluating the quality of machine-generated text.
 
-### Real-Time Simulation
-The system reacts to simulated user input to mirror real-world e-commerce support interactions
+Intent Classification: Identifying the user's intent in a message (e.g., inquiry, complaint).
